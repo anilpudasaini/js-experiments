@@ -96,7 +96,7 @@ var movieLists = [{
 
 
 
- function movieResults (movieLists) {
+ function (movieLists) {
 
   var movieResult=[];
 
