@@ -1,0 +1,36 @@
+*{
+	padding:0;
+	margin: 0;
+}
+
+body{
+	background-color: black;
+	backface-visibility: 0.3;
+
+}
+
+
+.container{
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	margin: 50px;
+}
+.image-wrapper{
+	width: 7000px;
+	position: absolute;
+	list-style: none;
+	display: block;
+	float: left;
+
+}
+
+.image-wrapper li {
+	display: inline-block;
+	float: left;	
+}
+
+
+
+
+
