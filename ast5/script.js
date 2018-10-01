@@ -32,10 +32,12 @@ var circleArray = [];
 var score = 0;
 	scoreText.style.fontSize = "large";
 
+
 var mouse = {
 	xPos : null,
 	yPos : null
 }
+
 
 var colorArray = [
 	'#105187',
@@ -46,6 +48,7 @@ var colorArray = [
 ];
 
 
+// document.addEventListener("keydown", keyDownHandler, false);
 
 function scoreChanger()
 {
