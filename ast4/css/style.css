@@ -25,6 +25,30 @@ body{
 
 }
 
+.circleDots{
+	height:30px;
+	width:150px;
+	position:absolute;	
+	bottom:20%;
+	left:35%;
+	/*background: red;*/
+}
+.circleDots ul li {
+	height:15px;
+	display:inline-block;
+	text-decoration:none;	
+	width:15px;
+	border-radius:10px;
+	background-color:white;
+	opacity:0.5;
+	
+}
+
+.circleDots ul li :hover{
+	background-color: pink;
+}
+
+
 .image-wrapper li {
 	display: inline-block;
 	float: left;	

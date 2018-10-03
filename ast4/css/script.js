@@ -2,29 +2,29 @@
  init();
 
 var container = document.getElementsByClassName('container')[0];
-var buttonR = document.createElement('button');
-var buttonL = document.createElement('button');
+var buttonR = document.createElement('span');
+var buttonL = document.createElement('span');
 
 
-buttonR.style.width='50px';
-buttonR.style.height='50px';
+buttonR.style.width='100px';
+buttonR.style.height='110px';
 buttonR.style.position='absolute';
-buttonR.innerHTML='>';
-buttonR.style.top ='50%';
+// buttonR.innerHTML='>';
+buttonR.style.top ='45%';
 buttonR.style.marginTop ='-25px';
 buttonR.style.right ='0px';
 buttonR.style.opacity = '0.5';
-buttonR.style.backgroundImage = "url('../images/left-arrow.png')";
+buttonR.style.backgroundImage = "url('images/right-arrow.png')";
 
 
-buttonL.style.width='50px';
-buttonL.style.height='50px';
+buttonL.style.width='100px';
+buttonL.style.height='110px';
 buttonL.style.position='absolute';
-buttonL.innerHTML='<';
-buttonL.style.top ='50%';
+// buttonL.innerHTML='<';
+buttonL.style.top ='45%';
 buttonL.style.marginTop ='-25px';
 buttonL.style.opacity ='0.5';
-buttonL.style.backgroundImage = "url('../images/right-arrow.png')";
+buttonL.style.backgroundImage = "url('images/left-arrow.png')";
 
 
 container.appendChild(buttonR);
@@ -148,6 +148,7 @@ var frames = 0;
    buttonR.onclick = function()
    {	
    	clearInterval(ref);
+
    	// clearInterval(ref2);
    	 currentIndex++;
    	 console.log(currentIndex + 'outside');
