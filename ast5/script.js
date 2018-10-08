@@ -15,17 +15,18 @@
 // 	game();
 // }
 
+var btn = document.getElementById('StartBtn');
 
 function game(){
 
-
+btn.style.display = 'none';
 var canvas = document.getElementsByTagName('canvas')[0];
 var scoreText = document.getElementsByTagName('P')[0];	
 var c = canvas.getContext('2d');
 var width = canvas.width;
 var height = canvas.height;
 var speed = 5;
-var numberOfCircles = 20 ;
+var numberOfCircles = 5 ;
 var maxRadius = 15;
 var minRadius = 10;
 var circleArray = [];
@@ -209,6 +210,6 @@ animate();
 
 };
 
-window.onload = function() {
-game();
-};
+// window.onload = function() {
+// game();
+// };

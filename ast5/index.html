@@ -3,6 +3,10 @@
 <head>
 	<title></title>
 	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+		}
 		canvas {
 			/*margin-left:200px;*/
 			/*margin-top: 25px;	*/
@@ -34,7 +38,20 @@
 			margin: 0px;
 		}
 
+		#StartBtn{
+			position:absolute;	
+			width: 1000px;
+			height: 500px;
+			background-image: url(antStartscreen.jpg);
+			background-repeat: no-repeat;
+			border: 2px solid black;
+			z-index: 1;
+
+		}
+
 	</style>
+
+	<button id="StartBtn" type="button" onclick="game()"></button>
 </head>
 <body>
 <!-- <div class="image">
