@@ -3,17 +3,14 @@
 span{
 
   font-weight: bold;
-  font-size: 18px;
+  /*font-size: 18px;*/
   text-align: center;
   word-spacing: 1px;
 }
 
 a{
-  /*color: white;*/
+
   text-decoration: none;
-  font-size: 9px;
-
-
 }
 
 li a:hover{
@@ -50,20 +47,25 @@ body{
 }
 
 .top-bar a{
-	text-decoration: none;
-	color: #858687;
+  line-height: 40px;
+  text-decoration: none;
+  color: #858687;
+  /*font-size: 16px;*/
 }
 
 .top-bar a:hover{
-	color: #fff;
+  color: #fff;
 }
 
 .top-bar-left{
   float: left;
   overflow: hidden;
-  font-size: 16px;
+
 }
 
+.top-bar-left a{
+  font-size: 16px;
+}
 .top-bar-right{
   float: right;
   overflow: hidden;
@@ -73,16 +75,16 @@ body{
 
 .top-bar-left .top-bar-icons{
   padding-right: 10px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.top-bar-right .top-bar-icons{
-  
-}
 .top-bar-right .top-bar-icons i{
   font-size: 16px;
   padding-right: 6px;
   padding-left: 8px;
   font-style: normal;
+
 }
 
 .slider-wrapper{
@@ -94,8 +96,8 @@ body{
 
 .down-bar{
   overflow: hidden; 
-}
 
+}
 
 .down-bar-left{
   float: left;
@@ -525,6 +527,7 @@ position: relative;
 }
 
 .article3-bottom img{
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12);
   margin-top: 20px;
 }
 .article4{
