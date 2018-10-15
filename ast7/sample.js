@@ -75,6 +75,8 @@ window.onload = function() {
         if( this.x + bird.width >= pipe[i].x && this.x <= pipe[i].x + pipeNorth.width && (this.y <= pipe[i].y + pipeNorth.height || this.y+bird.height >= pipe[i].y+constant) || this.y + bird.height >=  height - fg.height){
            
            flag = true;
+           // window.cancelAnimationFrame(_draw);
+           // console.log('collison')
           location.reload(); // reload the page
         }
         
