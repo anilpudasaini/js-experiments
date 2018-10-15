@@ -1,0 +1,67 @@
+
+
+.inner-width{
+	width: 73.125em;
+	margin: 0 auto;
+}
+
+.sort{
+width: 100%;
+
+/*margin: 0 auto;*/
+}
+
+.col2right{
+	width: 100%;
+
+}
+
+
+
+/*
+.right{
+	width: 690px;
+	width: 35.9375%;
+	float: right;
+	background-color:#fff;
+	
+}*/
+
+.footer-wrapper{
+	width: 100%;
+}
+
+.insta-widget{
+	/*width:100%;*/
+	line-height: 240px;
+	background-image: url("../images/insta-widget.png");
+
+
+}
+
+.subscribe{
+
+	width: 100%;
+	/*line-height: 200px;*/
+	color: white;
+
+
+}
+
+.footer-top{
+	/*width: 100%;*/
+	background-color:#212121; 
+	/*line-height: 540px;*/
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+}
+
+
+.footer-bottom-wrapper{
+
+	/*width: 100%;*/
+	line-height: 42px;
+	background-color: #303030;
+}
+
