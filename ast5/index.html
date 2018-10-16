@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+		}
+		canvas {
+			/*margin-left:200px;*/
+			/*margin-top: 25px;	*/
+			width: 	1000px;
+			height: 500px;
+			border: 1px solid black;
+		}
+
+		.score{
+			width: 80px;
+			height: 15px;
+			position: absolute;
+		}
+
+		a
+		{
+			text-decoration : none;
+		}
+
+		p{
+			background-color: rgba(76,81,89,0.2);			
+		}
+		img
+		{
+			position: absolute;
+		}
+
+		*{
+			margin: 0px;
+		}
+
+		#StartBtn{
+			position:absolute;	
+			width: 1000px;
+			height: 500px;
+			background-image: url(antStartscreen.jpg);
+			background-repeat: no-repeat;
+			border: 2px solid black;
+			z-index: 1;
+
+		}
+
+	</style>
+
+	<button id="StartBtn" type="button" onclick="game()"></button>
+</head>
+<body>
+<!-- <div class="image">
+	<img src="antStartscreen.jpg">
+</div> -->
+<div class="score">
+	<p id ="p">Score : 0</p>
+</div>
+</body>
+<canvas width="1000" height="500">
+</canvas>      
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
