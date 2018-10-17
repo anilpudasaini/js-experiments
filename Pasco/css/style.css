@@ -95,6 +95,32 @@ body{
   width: 100%;
 }
 
+.toggle
+{
+  width: 100%;
+  padding: 10px 40px;
+  background: transparent;
+  text-align: right;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 30px;
+  display: none;
+}
+
+.burgerMenu{
+  text-align: center;
+  display: none;
+}
+
+.burgerMenu li a{
+  color: #fff;
+}
+
+.burgerMenu li:hover{
+  background-color: #084e4e;
+ transition: 0.5s ease-in;
+}
+
 .down-bar{
   overflow: hidden; 
 
@@ -1209,6 +1235,22 @@ font-size: 0px;
 margin-right: 25px;
 }
 
+.toggle
+{
+
+  display: block;
+}
+
+.burgerMenu{
+  display: none;
+
+}
+
+.active{
+  display: block;
+}
+
+
 .down-bar-left {
     
     margin-left: 36%;
@@ -1247,12 +1289,13 @@ width: 20.89%;
 }
 
 .left-arrow{
-  top: 46%;
-  left: 50px;
+  top: 43%;
+  left: 38px;
 }
 
 .right-arrow{
-  top: 46%;
+  top: 43%;
+  right: 23px;
 }
 
 .right{
@@ -1417,7 +1460,7 @@ border: 1px solid cyan;
 
 .rightButton{
   top: 25%;
-  margin-right: 20px;
+  margin-right: 10px;
 
 }
 .leftButton{
