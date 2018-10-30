@@ -24,7 +24,7 @@ return Math.floor(Math.random() * n);
 function loadImages() 
 {
 
-	for(var i =0 ; i < 5 ; i++)
+	for(var i =0 ; i < 7 ; i++)
 	{
 	image = new Image();
 	image.src  = `images2/${ i + 1 }.png`;
@@ -48,6 +48,7 @@ class GameSound {
     this.divine = new Audio('sound/divine.wav');
     this.button_press = new Audio('sound/button_press.wav');
     this.highScore = new Audio('sound/highScore.wav');
+    this.bomb = new Audio('sound/bomb.wav');
     this.bgm.volume = 0.6;
     this.blastSound.volume = 0.7;
     this.sweet.volume = 0.9;
@@ -77,6 +78,9 @@ class GameSound {
       this.button_press.play();
     }else if (element == 'highScore') {
       this.highScore.play();
+    }else if (element == 'bomb') {
+      this.bomb.currentTime = 0;
+      this.bomb.play();
     }
   }
 
@@ -99,6 +103,7 @@ this.y1 = y;
 this.x2 = x;
 this.y2 = y;
 this.gapCount = 0;
+this.isSpecial = false;
 this.color;
 
 
@@ -191,6 +196,7 @@ localStorage[highScore] = highScore;
 
 function setRemoveFlag()
 {
+
 for (var x = 0; x < 10; x++) //for comparing candies along y-axis
 {
 var c0 = balls[x][0].color;
@@ -207,9 +213,17 @@ for ( var y = 1; y < 10; y++)
 			balls[x][y-2].remove = true;
 			balls[x][y-1].remove = true;
 			balls[x][y].remove = true;
+
 			
 			if (count === 4)
 				{
+					
+				balls[x][y].isSpecial = true;
+				balls[x][y].remove = false;
+				balls[x][y].color = 5;
+
+
+
 				sweet = true; //for new music
 			    }
 		    else if (count >= 5)
@@ -218,16 +232,16 @@ for ( var y = 1; y < 10; y++)
 			    	divine = true;
 			    }
 		
+	    }
+
 	}
 
+	else
+	{
+		c0 = c1;
+		count = 1;
 
-}
-else
-{
-	c0 = c1;
-	count = 1;
-
-}
+	}
 }
 }
 
@@ -250,6 +264,9 @@ for (var x = 1; x<10; x++)
 
 			if (count === 4)
 				{
+				balls[x][y].isSpecial = true;
+				balls[x][y].remove = false;
+				balls[x][y].color =  6;
 				sweet = true; //for sweet music
 			    }
 		     else if (count >= 5)
@@ -341,6 +358,7 @@ for(var y = 0; y < 10; y++)
 			,520);
 			highScore = (score>highScore) ? score:highScore;
 			sound.play('highScore');
+
 		}
 
 		if (divine)
@@ -380,7 +398,85 @@ function onMouseDown(e)
 	mouseDownX = e.offsetX;
 	mouseDownY = e.offsetY;
 	sound.play('button_press');
+
+	var ballX1 = Math.floor(mouseDownX/60);
+	var ballY1 = Math.floor((mouseDownY-100)/60);	
+
+	if (balls[ballX1][ballY1].isSpecial && balls[ballX1][ballY1].color === 5) // vertical line boom
+	{
+		sound.play('bomb');
+		for ( var y = 0; y < 10; y++)
+		{
+		balls[ballX1][y].remove = true;
+
+		}
+
+
+		for (var x = 0; x < 10; x++)
+		{
+			for(var y = 0, z = 0; y <=9; y++, z++)
+			{
+				while (z >= 0)
+				{
+					if (balls[x][z].remove)
+					{
+						z--;
+
+					}
+					else
+					{
+						break;
+					}
+				}
+				if (y != z)
+				{
+					var colorNum = (z >= 0) ? balls[x][z].color : getRandomNumber(5);
+					balls[x][y].moveBall(x, z, colorNum);
+					score += 100;
+				}
+		}
+	  }
+	}
+
+  if(balls[ballX1][ballY1].isSpecial && balls[ballX1][ballY1].color === 6)  //horizontal line boom
+	{
+
+		for ( var x = 0; x < 10; x++)
+		{
+		balls[x][ballY1].remove = true;
+
+		}
+
+
+		for (var x = 0; x < 10; x++)
+		{
+			for(var y = 0, z = 0; y <=9; y++, z++)
+			{
+				while (z >= 0)
+				{
+					if (balls[x][z].remove)
+					{
+						z--;
+
+					}
+					else
+					{
+						break;
+					}
+				}
+				if (y != z)
+				{
+					var colorNum = (z >= 0) ? balls[x][z].color : getRandomNumber(5);
+					balls[x][y].moveBall(x, z, colorNum);
+				}
+		}
+	  }
+	}
+
+
 }
+
+
 
 function onMouseUp(e) //magic happens here
 {

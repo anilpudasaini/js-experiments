@@ -70,12 +70,10 @@ function drawCanvas()
 	}
 
 
-cxt.fillStyle = '#ffff';
-cxt.font="25px bold Emilys Candy";
 
 //Time
 var sec = Math.floor(timeCount/1000);
-var mSec = timeCount % 1000;
+
 
 if (sec < 10)
 {
@@ -87,9 +85,15 @@ if (sec < 10)
 	}
 }
 
-cxt.fillText("Time Left : " + sec,20,50);
-cxt.fillText("Score : " + score,450,50);
-cxt.fillText("HighScore : " + highScore,220,50);
+
+cxt.font="21px candyFont "
+cxt.fillStyle = '#f27cf4';
+cxt.fillText("Time left : " + sec,10,50);
+cxt.fillStyle = '#E38720';
+cxt.fillText("Score : " + score,445,50);
+cxt.fillStyle = '#950ff0';
+cxt.font="23px candyFont "
+cxt.fillText("HighScore : " + highScore,200,50);
 cxt.fill();
 
 
