@@ -1,0 +1,101 @@
+
+#canvas{
+	margin : 0 0 0 10px;
+	border : 1px solid lightgrey;
+    position: relative;
+    background-image: url("../images2/background.png");
+}
+
+
+#tryAgainBtn{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: 45px;
+    left: 100px;
+    font-size: 20px;
+    border-radius: 50%;
+	background-color: purple;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.3), 0 10px 10px rgba(0,0,0,0.3);
+    border: none;
+    color: #66c4da;
+    text-shadow: 0 0px 0px rgba(0,0,0,0.3), 0 8px 9px rgba(0,0,0,0.3)
+    font-weight: bold;
+    outline: none;
+     font-family: 'Emilys Candy', cursive; 
+    font-family: candyFont;
+}
+
+#timeBtn{
+
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: 45px;
+    left: 500px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: purple;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.3), 0 10px 10px rgba(0,0,0,0.3);
+    border: none;
+    color: 
+    text-shadow: 0 0px 0px rgba(0,0,0,0.3), 0 8px 9px rgba(0,0,0,0.3)
+    font-weight: bold;
+    outline: none;
+     /*font-family: 'Emilys Candy', cursive; */
+    font-family: candyFont;
+}
+
+
+#tryAgainBtn:hover{
+    background-color: rgba(255,57,57,0.1);
+    transition: 0.5s ease-out;
+    border : 1px solid black;
+
+    }
+
+#timeBtn:hover{
+    transition: 0.5s ease-out;
+    background-color: rgba(255,57,57,0.1);
+    border : 1px solid black;
+
+    }
+#sweetImage{
+
+    position: absolute;
+    top: 23%;
+    left: 1%;
+    display: none;
+    /*transition: opacity 0.5s ease-in-out;*/
+
+}
+
+#divineImage{
+
+	position: absolute;
+    top: 24%;
+    left: 1%;
+    display: none;
+    /*transition: opacity 0.5s ease-in-out;*/
+
+}
+
+
+@font-face {
+	font-family: "candyFont";
+	src: url(../fonts/candy.ttf);
+    font-weight: 300;
+}
+
+
+body{
+	background-color:black;
+}
+
+
+#bgImage
+{
+	display: none;
+	background-repeat: no-repeat;
+
+}

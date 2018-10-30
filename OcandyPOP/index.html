@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		CandyPOP
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Emilys+Candy" rel="stylesheet">
+</head>
+
+
+	<body onload="setBgImage()">
+
+
+		<canvas id = 'canvas' width="600"  height="640"></canvas>
+		<img  id = 'bgImage' src="images2/bg.png">
+		<img  id = 'sweetImage' src="images2/sweet.png">
+		<img  id = 'divineImage' src="images2/divine.png">
+		<audio src="sound/hover.wav" id='hoverSound'></audio>
+		<button id = 'tryAgainBtn' onclick = "setJS('javascript/game.js')" onmouseover= "playHoverSound()">START</button>
+		<button id = 'timeBtn' onclick="setJS('javascript/trial.js')"  onmouseover= "playHoverSound()">Time Trail</button>
+
+	<script type="text/javascript" src="javascript/common.js">	</script>
+	<script type="text/javascript" src="javascript/script.js">	</script>
+
+
+	
+	</body>
+
+
+</html>
