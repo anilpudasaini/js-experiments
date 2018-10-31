@@ -411,66 +411,69 @@ function onMouseDown(e)
 
 		}
 
+		fall();
 
-		for (var x = 0; x < 10; x++)
-		{
-			for(var y = 0, z = 0; y <=9; y++, z++)
-			{
-				while (z >= 0)
-				{
-					if (balls[x][z].remove)
-					{
-						z--;
+								// for (var x = 0; x < 10; x++)
+								// {
+								// 	for(var y = 0, z = 0; y <=9; y++, z++)
+								// 	{
+								// 		while (z >= 0)
+								// 		{
+								// 			if (balls[x][z].remove)
+								// 			{
+								// 				z--;
 
-					}
-					else
-					{
-						break;
-					}
-				}
-				if (y != z)
-				{
-					var colorNum = (z >= 0) ? balls[x][z].color : getRandomNumber(5);
-					balls[x][y].moveBall(x, z, colorNum);
-					score += 100;
-				}
-		}
-	  }
+								// 			}
+								// 			else
+								// 			{
+								// 				break;
+								// 			}
+								// 		}
+								// 		if (y != z)
+								// 		{
+								// 			var colorNum = (z >= 0) ? balls[x][z].color : getRandomNumber(5);
+								// 			balls[x][y].moveBall(x, z, colorNum);
+								// 			score += 100;
+								// 		}
+								// }
+							 //  }
 	}
 
   if(balls[ballX1][ballY1].isSpecial && balls[ballX1][ballY1].color === 6)  //horizontal line boom
 	{
 
+		sound.play('bomb');
 		for ( var x = 0; x < 10; x++)
 		{
 		balls[x][ballY1].remove = true;
 
 		}
 
+		fall();
 
-		for (var x = 0; x < 10; x++)
-		{
-			for(var y = 0, z = 0; y <=9; y++, z++)
-			{
-				while (z >= 0)
-				{
-					if (balls[x][z].remove)
-					{
-						z--;
+									// for (var x = 0; x < 10; x++)
+									// {
+									// 	for(var y = 0, z = 0; y <=9; y++, z++)
+									// 	{
+									// 		while (z >= 0)
+									// 		{
+									// 			if (balls[x][z].remove)
+									// 			{
+									// 				z--;
 
-					}
-					else
-					{
-						break;
-					}
-				}
-				if (y != z)
-				{
-					var colorNum = (z >= 0) ? balls[x][z].color : getRandomNumber(5);
-					balls[x][y].moveBall(x, z, colorNum);
-				}
-		}
-	  }
+									// 			}
+									// 			else
+									// 			{
+									// 				break;
+									// 			}
+									// 		}
+									// 		if (y != z)
+									// 		{
+									// 			var colorNum = (z <= 0) ? balls[x][z].color : getRandomNumber(5);
+									// 			balls[x][y].moveBall(x, y, colorNum);
+									// 		}
+									// }
+								 //  }
 	}
 
 

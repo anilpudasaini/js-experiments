@@ -75,7 +75,7 @@ cxt.fillStyle = '#E38720';
 cxt.fillText("Score : " + score,445,50);
 cxt.fillStyle = '#950ff0';
 cxt.font="23px candyFont "
-cxt.fillText("HighScore : " + highScore,210,50);
+cxt.fillText("HighScore : " + highScore,205,50);
 cxt.fill();
 
 }

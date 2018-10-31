@@ -11,7 +11,7 @@
     position: absolute;
     width: 90px;
     height: 90px;
-    bottom: 45px;
+    top : 515px;
     left: 100px;
     font-size: 20px;
     border-radius: 50%;
@@ -31,7 +31,7 @@
     position: absolute;
     width: 90px;
     height: 90px;
-    bottom: 45px;
+    top : 515px;
     left: 500px;
     font-size: 20px;
     border-radius: 50%;

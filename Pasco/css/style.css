@@ -608,6 +608,7 @@ margin-top: 10px;
 }
 
 .main-content-right{
+	padding: 25px;
   float: right;
   background-color: #fff;
 width: 23.5042%;  /*(275/1170px)*/
