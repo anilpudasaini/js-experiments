@@ -1,133 +1,133 @@
 
 
 var movieLists = [{
-  name: "Instant Queue",
-  videos: [{
-    "id": 70111470,
-    "title": "Die Hard",
-    "boxarts": [{
-      width: 150,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/DieHard150.jpg"
-    },
-    {
-      width: 200,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/DieHard200.jpg"
-    }
-    ],
-    "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-    "rating": 4.0,
-    "bookmark": []
-  },
-  {
-    "id": 654356453,
-    "title": "Bad Boys",
-    "boxarts": [{
-      width: 200,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/BadBoys200.jpg"
-    },
-    {
-      width: 150,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/BadBoys150.jpg"
-    }
+	name: "Instant Queue",
+	videos: [{
+		"id": 70111470,
+		"title": "Die Hard",
+		"boxarts": [{
+			width: 150,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/DieHard150.jpg"
+		},
+		{
+			width: 200,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/DieHard200.jpg"
+		}
+		],
+		"url": "http://api.netflix.com/catalog/titles/movies/70111470",
+		"rating": 4.0,
+		"bookmark": []
+	},
+	{
+		"id": 654356453,
+		"title": "Bad Boys",
+		"boxarts": [{
+			width: 200,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/BadBoys200.jpg"
+		},
+		{
+			width: 150,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/BadBoys150.jpg"
+		}
 
-    ],
-    "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-    "rating": 5.0,
-    "bookmark": [{
-      id: 432534,
-      time: 65876586
-    }]
-  }
-  ]
+		],
+		"url": "http://api.netflix.com/catalog/titles/movies/70111470",
+		"rating": 5.0,
+		"bookmark": [{
+			id: 432534,
+			time: 65876586
+		}]
+	}
+	]
 },
 {
-  name: "New Releases",
-  videos: [{
-    "id": 65432445,
-    "title": "The Chamber",
-    "boxarts": [{
-      width: 150,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/TheChamber150.jpg"
-    },
-    {
-      width: 200,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/TheChamber200.jpg"
-    }
-    ],
-    "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-    "rating": 4.0,
-    "bookmark": []
-  },
-  {
-    "id": 675465,
-    "title": "Fracture",
-    "boxarts": [{
-      width: 200,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/Fracture200.jpg"
-    },
-    {
-      width: 150,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"
-    },
-    {
-      width: 300,
-      height: 200,
-      url: "http://cdn-0.nflximg.com/images/2891/Fracture300.jpg"
-    }
-    ],
-    "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-    "rating": 5.0,
-    "bookmark": [{
-      id: 432534,
-      time: 65876586
-    }]
-  }
-  ]
+	name: "New Releases",
+	videos: [{
+		"id": 65432445,
+		"title": "The Chamber",
+		"boxarts": [{
+			width: 150,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/TheChamber150.jpg"
+		},
+		{
+			width: 200,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/TheChamber200.jpg"
+		}
+		],
+		"url": "http://api.netflix.com/catalog/titles/movies/70111470",
+		"rating": 4.0,
+		"bookmark": []
+	},
+	{
+		"id": 675465,
+		"title": "Fracture",
+		"boxarts": [{
+			width: 200,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/Fracture200.jpg"
+		},
+		{
+			width: 150,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"
+		},
+		{
+			width: 300,
+			height: 200,
+			url: "http://cdn-0.nflximg.com/images/2891/Fracture300.jpg"
+		}
+		],
+		"url": "http://api.netflix.com/catalog/titles/movies/70111470",
+		"rating": 5.0,
+		"bookmark": [{
+			id: 432534,
+			time: 65876586
+		}]
+	}
+	]
 }
 ];
 
 
 
- function (movieLists) {
+function movieResults(movieLists) {
 
-  var movieResult=[];
-
-    
-  for(var i=0;i<movieLists.length;i++)
-  {
-   var videos = movieLists[i].videos;
-
-   for(var j=0; j<videos.length; j++)
-   {
+	var movieResult=[];
 
 
-    for (var k=0; k<videos[j].boxarts.length;k++)
+	for(var i = 0; i < movieLists.length; i++)
+	{
+		var videos = movieLists[i].videos;
 
-    {
-      var boxarts = videos[j].boxarts[k];
-      var result = {};
-     if (boxarts.width === 150 && boxarts.height === 200)
-      {
+		for(var j = 0; j < videos.length; j++)
+		{
 
-        result['id'] = videos[j].id;
-        result['title'] = videos[j].title;
-        result['boxart'] = boxarts.url; 
-        movieResult.push(result);
-      }
 
-    }
-  } 
-}
+			for (var k = 0; k < videos[j].boxarts.length; k++)
 
-return movieResult;
+			{
+				var boxarts = videos[j].boxarts[k];
+				var result = {};
+				if (boxarts.width === 150 && boxarts.height === 200)
+				{
+
+					result['id'] = videos[j].id;
+					result['title'] = videos[j].title;
+					result['boxart'] = boxarts.url; 
+					movieResult.push(result);
+				}
+
+			}
+		} 
+	}
+
+	return movieResult;
 
 }
 
@@ -156,7 +156,7 @@ console.log(movieResults(movieLists));
       "title": "Die Hard",
       "boxart": "http://cdn-0.nflximg.com/images/2891/DieHard150.jpg"
     }
-  ]; */
+    ]; */
 
   // return movieLists;
 
